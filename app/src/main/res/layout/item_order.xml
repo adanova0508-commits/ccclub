@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/card_background"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Заголовок заказа -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/orderId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Заказ #001"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/orderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="В процессе"
+                android:textSize="12sp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:background="@drawable/status_in_progress_bg" />
+
+        </LinearLayout>
+
+        <!-- Дата и длительность заказа -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/orderDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="15.12.2023 18:30"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/orderDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 час."
+                android:textColor="@color/accent_gold"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Место -->
+        <TextView
+            android:id="@+id/orderAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Компьютер №7"
+            android:textColor="@color/primary_brown"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="4dp" />
+
+        <!-- Список товаров -->
+        <TextView
+            android:id="@+id/orderItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Кола (2), Картофель фри (1)"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <!-- Итого -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Итого:"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/orderTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="320 руб"
+                android:textColor="@color/accent_gold"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Кнопка повторить -->
+        <Button
+            android:id="@+id/btnRepeatOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Повторить"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/primary_brown"
+            android:textColor="@color/text_on_dark"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Заголовок уведомления"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etNotificationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите заголовок"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сообщение"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etNotificationMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите сообщение"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Тип уведомления"
+        android:layout_marginBottom="4dp" />
+
+    <Spinner
+        android:id="@+id/spinnerNotificationType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

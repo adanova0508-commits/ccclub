@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">CC Club</string>
+    <string name="app_logo">Логотип CC Club</string>
+
+    <!-- Главный экран -->
+    <string name="welcome_title">Добро пожаловать в CC Club!</string>
+    <string name="our_services">Наши услуги</string>
+    <string name="add_to_cart">Добавить в корзину</string>
+
+    <!-- Услуги -->
+    <string name="service_gaming_pc">Игровой компьютер</string>
+    <string name="service_gaming_pc_desc">Мощный ПК с RTX 4080, 32GB RAM, 240Hz монитор</string>
+    <string name="service_ps5">PlayStation 5</string>
+    <string name="service_ps5_desc">Новейшая консоль с библиотекой игр</string>
+    <string name="service_board_games">Настольные игры</string>
+    <string name="service_board_games_desc">Большой выбор настольных игр для компании</string>
+
+    <!-- Цены -->
+    <string name="price_300">300 руб/час</string>
+    <string name="price_250">250 руб/час</string>
+    <string name="price_100">100 руб/час</string>
+
+    <!-- Авторизация -->
+    <string name="login">Вход</string>
+    <string name="register">Регистрация</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="name">Имя</string>
+    <string name="confirm_password">Подтвердите пароль</string>
+
+    <!-- Сообщения -->
+    <string name="login_success">Вход выполнен успешно!</string>
+    <string name="registration_success">Регистрация прошла успешно!</string>
+    <string name="auth_required">Для добавления в корзину требуется авторизация</string>
+    <string name="error_fields">Заполните все поля</string>
+    <string name="error_password_match">Пароли не совпадают</string>
+    <string name="services">Услуги</string>
+    <string name="food">Еда/Напитки</string>
+    <string name="cart">Корзина</string>
+    <string name="profile">Профиль</string>
+    <string name="admin_panel">Панель администратора</string>
+    <string name="total_orders">Всего заказов</string>
+    <string name="revenue">Выручка</string>
+    <string name="zero">0</string>
+    <string name="zero_rub">0 руб</string>
+    <string name="filters">Фильтры</string>
+    <string name="analytics">Аналитика</string>
+    <string name="quick_actions">Быстрые действия</string>
+    <string name="add_item">➕ Добавить позицию</string>
+    <string name="stop_list">⛔ Стоп-лист</string>
+    <string name="customers">👥 Клиенты</string>
+    <string name="notifications">🔔 Уведомления</string>
+    <string name="export_excel">📊 Экспорт в Excel</string>
+    <string name="phone_label">Телефон: %s</string>
+    <string name="preferred_place">Предпочитаемое место: %s</string>
+</resources>

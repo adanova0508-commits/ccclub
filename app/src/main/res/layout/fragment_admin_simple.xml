@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Панель администратора"
+            android:textSize="24sp"
+            android:textColor="@color/brown_darker"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- Фильтры -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Spinner
+                android:id="@+id/dateRangeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/spinner_background" />
+
+            <Spinner
+                android:id="@+id/filterStatusSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_background" />
+        </LinearLayout>
+
+        <!-- Быстрые действия -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnAddMenuItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="➕ Добавить позицию в меню"
+                android:backgroundTint="@color/brown_medium"
+                android:textColor="@color/text_light"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnManageStopList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⛔ Управление стоп-листом"
+                android:backgroundTint="@color/brown_medium"
+                android:textColor="@color/text_light"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnViewCustomers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="👥 Просмотр клиентов"
+                android:backgroundTint="@color/brown_medium"
+                android:textColor="@color/text_light"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnSendNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔔 Отправить уведомления"
+                android:backgroundTint="@color/brown_medium"
+                android:textColor="@color/text_light"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+        <!-- Списки -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                android:background="@color/beige_primary"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Последние заказы"
+                    android:textColor="@color/brown_darker"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ListView
+                    android:id="@+id/ordersListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical"
+                android:background="@color/beige_primary"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Клиенты"
+                    android:textColor="@color/brown_darker"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ListView
+                    android:id="@+id/usersListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Экспорт -->
+        <Button
+            android:id="@+id/btnExportExcel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Экспорт отчетов"
+            android:backgroundTint="@color/accent_gold"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Кнопка выхода -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выйти"
+            android:layout_marginTop="8dp" />
+        <Button
+            android:id="@+id/btnExitAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="← Вернуться в профиль"
+            android:layout_marginBottom="8dp" />
+    </LinearLayout>
+</ScrollView>

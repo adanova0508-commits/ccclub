@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/card_background"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Название"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/foodCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Категория"
+            android:textColor="@color/primary_brown"
+            android:textSize="12sp"
+            android:background="@drawable/category_bg"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/foodDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Описание"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/foodPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="100 руб"
+                android:textColor="@color/accent_gold"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Кнопки + и - -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnDecreaseFood"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/light_brown"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:id="@+id/tvFoodQuantity"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/btnIncreaseFood"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/light_brown"
+                    android:textColor="@color/text_primary" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/primary_brown"
+                android:textColor="@color/text_on_dark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

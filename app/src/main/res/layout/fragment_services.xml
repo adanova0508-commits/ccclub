@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Логотип -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/app_logo"
+            android:scaleType="centerCrop" />
+
+        <!-- Приветствие -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Наши услуги"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Секция услуг -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Доступные услуги"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Карточка услуги 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Игровой компьютер"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Мощный ПК с RTX 4080, 32GB RAM, 240Hz монитор"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="300 руб/час"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddGamingPC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить в корзину"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_brown"
+                    android:textColor="@color/text_on_dark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка услуги 2 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PlayStation 5"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Новейшая консоль с библиотекой игр"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="250 руб/час"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddPS5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить в корзину"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_brown"
+                    android:textColor="@color/text_on_dark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка услуги 3 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Настольные игры"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Большой выбор настольных игр для компании"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100 руб/час"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddBoardGames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить в корзину"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_brown"
+                    android:textColor="@color/text_on_dark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка услуги 4: VR очки -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VR очки"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Виртуальная реальность с полным погружением"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="400 руб/час"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddVR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить в корзину"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_brown"
+                    android:textColor="@color/text_on_dark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка услуги 5: Киберспорт арена -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Киберспорт арена"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Соревновательная зона для киберспорта"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="500 руб/час"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddEsports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить в корзину"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_brown"
+                    android:textColor="@color/text_on_dark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка услуги 6: Караоке -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Караоке"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Профессиональная караоке система"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="150 руб/час"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddKaraoke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить в корзину"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_brown"
+                    android:textColor="@color/text_on_dark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка услуги 7: Кино зал -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Кино зал"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Комфортный просмотр фильмов на большом экране"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="200 руб/час"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddCinema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить в корзину"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_brown"
+                    android:textColor="@color/text_on_dark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка услуги 8: Конференц-зал -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Конференц-зал"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Для бизнес-встреч и мероприятий"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="350 руб/час"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnAddConference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить в корзину"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_brown"
+                    android:textColor="@color/text_on_dark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

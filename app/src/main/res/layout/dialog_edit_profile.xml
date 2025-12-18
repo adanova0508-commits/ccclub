@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Имя"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите ваше имя"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите email"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Телефон"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите телефон для связи"
+        android:inputType="phone"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Предпочитаемое место"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etPreferredPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Например: Компьютер №7, PlayStation №3"
+        android:inputType="text" />
+
+</LinearLayout>

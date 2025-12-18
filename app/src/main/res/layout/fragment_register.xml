@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Регистрация"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Имя -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Имя"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите ваше имя"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите email"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Пароль -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Пароль"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите пароль (минимум 6 символов)"
+            android:inputType="textPassword"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Кнопка регистрации -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Зарегистрироваться"
+            android:backgroundTint="@color/primary_brown"
+            android:textColor="@color/text_on_dark" />
+
+    </LinearLayout>
+</ScrollView>

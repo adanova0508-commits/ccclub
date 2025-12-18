@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CCClub" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_brown</item>
+        <item name="colorPrimaryVariant">@color/dark_brown</item>
+        <item name="colorOnPrimary">@color/text_on_dark</item>
+        <item name="colorSecondary">@color/secondary_brown</item>
+        <item name="colorSecondaryVariant">@color/dark_brown</item>
+        <item name="colorOnSecondary">@color/text_on_dark</item>
+        <item name="android:statusBarColor">@color/primary_brown</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:background">@color/background</item>
+    </style>
+</resources>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Панель администратора"
+            android:textSize="24sp"
+            android:textColor="@color/brown_darker"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- Статистика в карточках -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@color/beige_primary"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Всего заказов"
+                        android:textColor="@color/brown_medium"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalOrders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/brown_darker"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@color/beige_primary"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Выручка"
+                        android:textColor="@color/brown_medium"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalRevenue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 руб"
+                        android:textColor="@color/accent_gold"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Фильтры -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/beige_primary"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Фильтры"
+                    android:textColor="@color/brown_darker"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/dateRangeSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/spinner_background" />
+
+                    <Spinner
+                        android:id="@+id/filterStatusSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Графики -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/beige_primary"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Аналитика"
+                    android:textColor="@color/brown_darker"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/revenueChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/categoryChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Быстрые действия -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/beige_primary"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Быстрые действия"
+                    android:textColor="@color/brown_darker"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <Button
+                        android:id="@+id/btnAddMenuItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:text="➕ Добавить позицию"
+                        android:backgroundTint="@color/brown_medium"
+                        android:textColor="@color/text_light" />
+
+                    <Button
+                        android:id="@+id/btnManageStopList"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:text="⛔ Стоп-лист"
+                        android:backgroundTint="@color/brown_medium"
+                        android:textColor="@color/text_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnViewCustomers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:text="👥 Клиенты"
+                        android:backgroundTint="@color/brown_medium"
+                        android:textColor="@color/text_light" />
+
+                    <Button
+                        android:id="@+id/btnSendNotifications"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:text="🔔 Уведомления"
+                        android:backgroundTint="@color/brown_medium"
+                        android:textColor="@color/text_light" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Списки -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/beige_primary"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Последние заказы"
+                        android:textColor="@color/brown_darker"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <ListView
+                        android:id="@+id/ordersListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:divider="@color/brown_light"
+                        android:dividerHeight="1dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="@color/beige_primary"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Клиенты"
+                        android:textColor="@color/brown_darker"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <ListView
+                        android:id="@+id/usersListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:divider="@color/brown_light"
+                        android:dividerHeight="1dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Экспорт -->
+        <Button
+            android:id="@+id/btnExportExcel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Экспорт в Excel"
+            android:backgroundTint="@color/accent_gold"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+</ScrollView>
